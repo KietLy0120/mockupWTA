@@ -1,25 +1,119 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
-  paper: {
-    backgroundColor: '#454B1B',
-    boxShadow: 'none',
-    flexDirection: 'column',
+  gridContainer: {
+      flexDirection: 'row',
+  },
+  gridItem: {
     textAlign: 'center',
-    padding: theme.spacing(2),
   },
-  title: {
-    marginTop: theme.spacing(3),
+  image: {
+    width: '100%',
+    height: 'auto',
+    objectFit: 'cover',
   },
-  subtitle: {
-    marginTop: theme.spacing(3),
-    color: 'white',
+  admin: {
+    position: 'absolute', 
+    bottom: 10, 
+    right: 10
   },
-  body: {
-    marginTop: theme.spacing(3),
+
+  gold: {
+    color: 'gold',
+    fontSize: '40px',
+    '&:hover': {
+      fontSize: '72px',
+    },
   },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
+  green: {
+    color: 'green',
+    fontSize: '40px',
+    '&:hover': {
+      fontSize: '72px',
+    },
   },
-  
+  grey: {
+    color: 'gray',
+    fontSize: '40px',
+    '&:hover': {
+      fontSize: '72px',
+    },
+  },
 }));
+
+export const goldOptions = {
+  strokeColor: 'gold',
+  strokeOpacity: 1,
+  strokeWeight: 6,
+  fillColor: 'gold',
+  fillOpacity: 0.35,
+  clickable: true,
+  draggable: false,
+  editable: false,
+  visible: true,
+  radius: 30000,
+  zIndex: 1
+};
+
+export const greenOptions = {
+  strokeColor: 'green',
+  strokeOpacity: 1,
+  strokeWeight: 6,
+  fillColor: 'green',
+  fillOpacity: 0.35,
+  clickable: true,
+  draggable: false,
+  editable: false,
+  visible: true,
+  radius: 30000,
+  zIndex: 1
+};
+
+export const greyOptions = {
+  strokeColor: 'gray',
+  strokeOpacity: 1,
+  strokeWeight: 6,
+  fillColor: 'gray',
+  fillOpacity: 0.35,
+  clickable: true,
+  draggable: false,
+  editable: false,
+  visible: true,
+  radius: 30000,
+  zIndex: 1
+};
+
+export const containerStyle = {
+  width: '100%',
+  height: '100%'
+};
+
+export const exampleMapStyles = [
+  {
+      featureType: "poi",
+      elementType: "geometry",
+      stylers: [
+          {
+              color: "#eeeeee",
+          },
+      ],
+  },
+  {
+      featureType: "poi",
+      elementType: "labels.text",
+      stylers: [
+          {
+              visibility: "off",
+          },
+      ],
+  },
+  {
+      featureType: "water",
+      elementType: "labels.text.fill",
+      stylers: [
+          {
+              color: "#9e9e9e",
+          },
+      ],
+  },
+];
